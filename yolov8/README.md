@@ -3,8 +3,6 @@
 this repo is for 2024 summer internship projects
 in this branch, yolov8 pose landmarker is being demo.
 
-______________________________________________
-
 requirements:
 
 - env:
@@ -14,8 +12,6 @@ requirements:
 
 - device:
   - webcam(currently using logi C922 PRO 1080P webcam)
-
-______________________________________________
 
 user guide:
 first, run test.py to train the pre-trained model(either 8l, 8m or 8n. speed: 8n<8m<8l, accuracy:8n<8m<8l)
