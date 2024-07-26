@@ -7,13 +7,13 @@ ______________________________________________
 
 requirements:
 
-* env:
-  * python 3.10.14(recommanded)
-  * ultralytics 8.2.57
-  * torch 2.3.1+cu118
+- env:
+  - python 3.10.14(recommanded)
+  - ultralytics 8.2.57
+  - torch 2.3.1+cu118
 
-* device:
-  * webcam(currently using logi C922 PRO 1080P webcam)
+- device:
+  - webcam(currently using logi C922 PRO 1080P webcam)
 
 ______________________________________________
 
