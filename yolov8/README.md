@@ -4,14 +4,17 @@ this repo is for 2024 summer internship projects
 in this branch, yolov8 pose landmarker is being demo.
 
 ______________________________________________
-requirements:
-env:
-python 3.10.14(recommanded)
-ultralytics 8.2.57
-torch 2.3.1+cu118
 
-device:
-webcam(currently using logi C922 PRO 1080P webcam)
+requirements:
+
+* env:
+  * python 3.10.14(recommanded)
+  * ultralytics 8.2.57
+  * torch 2.3.1+cu118
+
+* device:
+  * webcam(currently using logi C922 PRO 1080P webcam)
+
 ______________________________________________
 
 user guide:
