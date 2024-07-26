@@ -14,6 +14,7 @@ requirements:
   - webcam(currently using logi C922 PRO 1080P webcam)
 
 user guide:
-first, run test.py to train the pre-trained model(either 8l, 8m or 8n. speed: 8n<8m<8l, accuracy:8n<8m<8l)
-afterwards, change the corresponding directory of best.pt in custom.py
-then, run custom.py to see the pose landmarking for the video stream
+
+- first, run test.py to train the pre-trained model(either 8l, 8m or 8n. speed: 8n<8m<8l, accuracy:8n<8m<8l) 
+- afterwards, change the corresponding directory of best.pt in custom.py
+- then, run custom.py to see the pose landmarking for the video stream
