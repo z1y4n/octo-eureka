@@ -7,7 +7,7 @@ from time import sleep
 # Define the dimensions of checkerboard
 CHECKERBOARD = (6,6)
 MIN_POINTS = 30
-RECORD = True
+RECORD = False
  
 # Stop the iteration when specified
 # accuracy, epsilon, is reached or
