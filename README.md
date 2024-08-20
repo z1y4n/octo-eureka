@@ -32,9 +32,13 @@ Currently using yolov8 <https://github.com/ultralytics/ultralytics> for detectin
   - webcam(currently using logi C922 PRO 1080P webcam) or cctv
 
 ### User Guide:
+
 There are two parts: pose landmarker and cctv tracker.
+
 If using webcam as video stream input, please run calibrate.py for calibrating.
+
 There are four .csv output: camera_distortion, camera_matrix, rotation_vectors and translation_vectors
+
 use camera_distortion and camera_matrix as the input for the calibration function.
 
 - #### Pose Landmarker(./yolov8)
