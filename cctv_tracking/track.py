@@ -1,29 +1,36 @@
 from collections import defaultdict
 
-import threading, time
+import threading
 import queue
 
 import cv2
 import numpy as np
-from numpy import genfromtxt
+# from numpy import genfromtxt
 
 import ultralytics
 from ultralytics import YOLO
 
 model = YOLO("yolov8\yolov8s.onnx", task="detect")  # load an official model
+# model = YOLO("yolov8\yolov8s.pt")
 ultralytics.checks()
 
 q=queue.Queue()
 cap = cv2.VideoCapture('rtsp://admin:00000@158.132.102.201:8554/live_06',cv2.CAP_FFMPEG)
 # lock = threading.Lock()
+
+state = True
 def Receive():
+    state = True
     ret, frame = cap.read()
     q.put(frame) # put the first frame into the queue
-    while ret:
+    while ret:        
+        if (not state):
+            return        
+        if cap.get(cv2.CAP_PROP_BUFFERSIZE) > 1:
+            cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
         ret, frame = cap.read()
         q.put(frame)
-        # if cap.get(cv2.CAP_PROP_BUFFERSIZE) > 1:
-        #     cap.set(cv2.CAP_PROP_BUFFERSIZE, 1)
+
 
 
 def Display():
@@ -31,7 +38,7 @@ def Display():
     while True:
         if q.empty() !=True:
             frame=q.get()
-            results = model.track(frame, persist=True, tracker="botsort.yaml", conf=0.35, vid_stride=1, classes=0)
+            results = model.track(frame, persist=True, tracker="botsort.yaml", conf=0.35, vid_stride=5, classes=0, device=0)
             if (results==None or results[0].boxes.id==None):
                 continue
 
@@ -52,7 +59,9 @@ def Display():
             print("Quitting...")
             cap.release()
             cv2.destroyAllWindows()
-            break     
+            global state
+            state = False
+            return     
 
 p1 = threading.Thread(target=Receive)
 p2 = threading.Thread(target=Display)

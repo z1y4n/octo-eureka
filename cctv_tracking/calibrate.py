@@ -30,7 +30,7 @@ objectp3d[0, :, :2] = np.mgrid[0:CHECKERBOARD[0],
                                0:CHECKERBOARD[1]].T.reshape(-1, 2)
 prev_img_shape = None
 
-cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
+cap = cv2.VideoCapture('rtsp://admin:00000@158.132.102.201:8554/live_06',cv2.CAP_FFMPEG)
 FPS = cap.get(cv2.CAP_PROP_FPS)
 
 # Check if the webcam is opened correctly

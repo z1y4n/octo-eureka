@@ -1,6 +1,6 @@
 from ultralytics import YOLO
 
 # Load a model
-model = YOLO("yolov8\yolov8s.pt")  # load an official model
+model = YOLO("yolov8\yolov8s.pt")  # load yolov8s.pt
 # Export the model
-model.export(format="engine")
+model.export(format="onnx", int8=True) # export to yolov8s.onnx
