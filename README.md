@@ -41,12 +41,12 @@ There are four .csv output: camera_distortion, camera_matrix, rotation_vectors a
 
 use camera_distortion and camera_matrix as the input for the calibration function.
 
-- #### Pose Landmarker(./yolov8)
+- #### Pose Landmarker (./yolov8)
   - first, run train.py to train the pre-trained model(either 8l, 8m or 8n. speed: 8n<8m<8l, accuracy:8n<8m<8l)
   - afterwards, change the corresponding directory of best.pt in custom.py
   - then, run custom.py to see the pose landmarking for the video stream
 
-- #### CCTV Tracker(./cctv_tracking)
+- #### CCTV Tracker (./cctv_tracking)
   - run gpu_test.py for testing if GPU and CUDA are available.
   - in case there is a need for changing into another model/format, use model_convert.py for converting.
   - check if the url of CCTV and the directory of the model are correct.
