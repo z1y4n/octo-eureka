@@ -1,7 +1,7 @@
 # octo-eureka
 
-this repo is for 2024 summer internship projects
-currently using mediapipe library <https://github.com/google-ai-edge/mediapipe> for basic functions implementation
+this repo is for 2024 summer internship projects.
+currently using mediapipe library <https://github.com/google-ai-edge/mediapipe> for basic functions implementation.
 
 ## Required Environment:
 - python v3.9/v3.10(recommanded)
