@@ -8,12 +8,12 @@ Currently using yolov8 <https://github.com/ultralytics/ultralytics> for detectin
 
 - ### envs
 
-'''shell
+```bash
 pip install ultralytics==8.2.57
 pip install onnx==1.16.2
 pip install onnxruntime-gpu==1.16.1
 conda install pytorch==2.3.1 torchvision==0.18.1 torchaudio==2.3.1 pytorch-cuda=11.8 -c pytorch -c nvidia
-'''
+```
 
 - ### device
 
