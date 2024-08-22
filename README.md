@@ -8,7 +8,7 @@ Currently using yolov8 <https://github.com/ultralytics/ultralytics> for detectin
 
 - ### envs
 
-'''bash
+'''shell
 pip install ultralytics==8.2.57
 pip install onnx==1.16.2
 pip install onnxruntime-gpu==1.16.1
