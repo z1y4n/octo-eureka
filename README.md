@@ -8,6 +8,8 @@ Currently using yolov8 <https://github.com/ultralytics/ultralytics> for detectin
 
 - ### envs
 
+  - python==3.10.16
+  
 ```bash
 pip install ultralytics==8.2.57
 pip install onnx==1.16.2
