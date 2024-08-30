@@ -1,6 +1,3 @@
-
-
-
 from collections import defaultdict
 
 import threading
@@ -13,15 +10,12 @@ import numpy as np
 import ultralytics
 from ultralytics import YOLO
 
-model = YOLO("yolov8\yolov8s.onnx", task="detect")  # load an official model
+model = YOLO("yolov8\yolov8s.onnx")  # load an official model
 # model = YOLO("yolov8\yolov8s.pt")
 ultralytics.checks()
 
 q=queue.Queue()
-password = input("Enter the password: ")
-ip = input("Enter the IP address: ") or "158.132.102.201:8554"
-channel = input("Enter the channel: ") or "live_06"
-cap = cv2.VideoCapture(f'rtsp://admin:{password}@{ip}/{channel}',cv2.CAP_FFMPEG)
+cap = cv2.VideoCapture('rtsp://admin:00000@158.132.102.201:8554/live_06',cv2.CAP_FFMPEG)
 # lock = threading.Lock()
 
 state = True
